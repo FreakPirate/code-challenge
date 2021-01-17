@@ -53,7 +53,8 @@
       </div>
       <div class="col-lg offset-lg-1">
         <div class="form-group">
-          <%= f.text_field :email, class: "form-control", placeholder: "hello@company.com"%>
+          <%= f.text_field :email, class: "form-control #{f.object.errors[:email].present? ? "is-invalid": ""}", placeholder: "hello@getmainstreet.com" %>
+          <div class="text-danger"><%= f.object.errors[:email].first %></div>
         </div>
       </div>
     </div>
