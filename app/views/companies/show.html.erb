@@ -12,8 +12,9 @@
   <div class="bg-success">
     <div class="container p-5 text-white">
       <h1><%= @company.name %></h1>
-      <h3><mark>City, State</mark></h3>
-      <pre><mark>☝️ This is what needs to be udpated. Examples: Atlanta, GA or Nashvile, TN</mark></pre>
+      <% if @company.city_state.present? %>
+        <h3><mark><%= @company.city_state %></mark></h3>
+      <% end %>
     </div>
   </div>
 
