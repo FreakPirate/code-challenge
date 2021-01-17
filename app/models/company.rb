@@ -12,8 +12,6 @@ class Company < ApplicationRecord
     [city, state].compact.blank? ? nil : [city, state].join(', ')
   end
 
-  private
-
   def update_city_state
     address = ZipCodes.identify(zip_code)
     unless address.nil?
